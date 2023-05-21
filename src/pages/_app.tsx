@@ -1,6 +1,7 @@
 import '~/styles/globals.css'
 import type { AppProps } from 'next/app'
 import { Poppins } from 'next/font/google'
+import { Analytics } from '@vercel/analytics/react';
 import clsx from 'clsx'
 
 const poppins = Poppins({
@@ -11,8 +12,11 @@ const poppins = Poppins({
 
 export default function App({ Component, pageProps }: AppProps) {
 	return (
-		<main className={clsx(poppins.className, 'subpixel-antialiased font-sans scroll-smooth bg-t-bg')}>
-			<Component {...pageProps} />
-		</main>
+		<>
+			<main className={clsx(poppins.className, 'subpixel-antialiased font-sans scroll-smooth bg-t-bg')}>
+				<Component {...pageProps} />
+			</main>
+			<Analytics />
+		</>
 	)
 }
