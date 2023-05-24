@@ -4,7 +4,7 @@ import { infiniteTransition } from "~/utils/animation";
 
 export default function Sparkle() {
 	return (
-		<svg className='absolute top-0 -left-10' width="68" height="78" viewBox="0 0 68 78" fill="none" xmlns="http://www.w3.org/2000/svg">
+		<svg className='absolute w-12 md:w-16 -top-6 lg:-left-10 left-8' viewBox="0 0 68 78" fill="none" xmlns="http://www.w3.org/2000/svg">
 			<motion.path
 				initial={{ scale: 1, rotate: 0.02 }}
 				animate={{ scale: [0.8, 1.2], rotate: 0.02 }}

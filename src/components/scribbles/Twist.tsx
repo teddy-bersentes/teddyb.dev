@@ -5,9 +5,7 @@ import { infiniteTransition } from "~/utils/animation";
 export default function Twist() {
 	return (
 		<motion.svg
-			className='absolute right-40 -top-16'
-			width="69"
-			height="77"
+			className='absolute w-12 xs:w-14 md:w-16 md:-top-16 -top-8 md:right-40 sm:right-36 xs:right-20 right-10'
 			viewBox="0 0 69 77"
 			fill="none"
 			xmlns="http://www.w3.org/2000/svg"

@@ -13,7 +13,7 @@ const poppins = Poppins({
 export default function App({ Component, pageProps }: AppProps) {
 	return (
 		<>
-			<main className={clsx(poppins.className, 'subpixel-antialiased font-sans scroll-smooth bg-t-bg')}>
+			<main className={clsx(poppins.className, 'subpixel-antialiased font-sans scroll-smooth min-w-[22.5rem]')}>
 				<Component {...pageProps} />
 			</main>
 			<Analytics />

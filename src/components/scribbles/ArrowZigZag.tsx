@@ -5,7 +5,7 @@ import { infiniteTransition } from "~/utils/animation";
 export default function ArrowZigZag() {
 	return (
 		<motion.svg
-			className='absolute -bottom-8 ml-96'
+			className='absolute md:w-24 -bottom-8 md:ml-[22.75rem] ml-80 w-20 hidden min-[688px]:block'
 			width="103"
 			height="103"
 			viewBox="0 0 103 103"

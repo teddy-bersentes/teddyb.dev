@@ -7,8 +7,11 @@ module.exports = {
 	],
 	theme: {
 		extend: {
+			screens: {
+				xs: "504px",
+			},
 			fontFamily: {
-				sans: ["var('---font-poppins')"],
+				sans: ["var('--font-poppins')"],
 			},
 			colors: {
 				t: {

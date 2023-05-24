@@ -27,28 +27,11 @@ function Color({ variant, children }: Props) {
 function Hero() {
 
 	return (
-		<div className='relative flex flex-col items-center justify-center w-full pt-28'>
-			<motion.div
-				className='max-w-[52.3125rem] flex flex-col justify-center items-center relative'
-				initial={{ opacity: 0, y: -20 }}
-				animate={{ opacity: 1, y: 0 }}
-				transition={{
-					type: 'spring',
-					damping: 10,
-					stiffness: 100,
-					velocity: 2,
-				}}
-
-			>
-				<motion.div
-					className='flex flex-col items-center justify-center w-full'
-					key='text'
-					initial={{ opacity: 0, y: -20 }}
-					animate={{ opacity: 1, y: 0 }}
-					transition={{ delay: 0.2 }}
-				>
-					<p className='text-xl font-semibold text-center'>Hi, I&apos;m Teddy</p>
-					<h1 className='text-5xl font-bold max-w-[52.3125rem] text-center mt-4 leading-[4.5rem]'>
+		<div className='relative flex flex-col items-center justify-center w-full pb-16 pt-28'>
+			<div className='max-w-[52.3125rem] flex flex-col justify-center items-center relative px-4' >
+				<div className='flex flex-col items-center justify-center w-full'>
+					<p className='text-lg font-semibold text-center md:text-xl'>Hi, I&apos;m Teddy</p>
+					<h1 className='md:text-5xl xs:text-[2.5rem] text-[1.75rem] font-bold max-w-[52.3125rem] text-center mt-4 md:leading-[4.5rem] xs:px-4 px-0'>
 						I specialize in
 						{' '}
 						<Color variant='red'>ideating</Color>,
@@ -61,7 +44,7 @@ function Hero() {
 					<Button className='mt-10'>
 						Show me more
 					</Button>
-				</motion.div>
+				</div>
 
 				<Scribble.Twist />
 				<Scribble.Shapes />
@@ -72,7 +55,7 @@ function Hero() {
 				<Scribble.Butterfly />
 				<Scribble.ArrowCurve />
 				<Scribble.ArrowZigZag />
-			</motion.div>
+			</div>
 		</div>
 	);
 }

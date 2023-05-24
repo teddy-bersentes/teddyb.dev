@@ -5,9 +5,7 @@ import { infiniteTransition } from "~/utils/animation";
 export default function Wizz() {
 	return (
 		<motion.svg
-			className='absolute -top-10 left-44'
-			width="78"
-			height="64"
+			className='absolute left-44 sm:-top-12 md:w-[4.25rem] w-14 -top-16 min-[520px]:block hidden'
 			viewBox="0 0 78 64"
 			fill="none"
 			xmlns="http://www.w3.org/2000/svg"

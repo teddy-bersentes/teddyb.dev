@@ -5,7 +5,7 @@ import { infiniteTransition } from "~/utils/animation";
 export default function Planet() {
 	return (
 		<motion.svg
-			className='absolute -right-2 -bottom-4' width="90" height="67" viewBox="0 0 90 67" fill="none" xmlns="http://www.w3.org/2000/svg"
+			className='absolute xs:right-8 right-2 xs:bottom-2 bottom-10 md:w-[5.625rem] xs:w-20 w-16' viewBox="0 0 90 67" fill="none" xmlns="http://www.w3.org/2000/svg"
 			initial={{ y: 0, rotate: 0.02 }}
 			animate={{ y: [10, -10], rotate: 0.02 }}
 			transition={{ duration: 2.6, ...infiniteTransition, }}

@@ -5,9 +5,7 @@ import { infiniteTransition } from "~/utils/animation";
 export default function ArrowCurve() {
 	return (
 		<motion.svg
-			className='absolute mr-72 -bottom-20'
-			width="90"
-			height="87"
+			className='absolute w-16 mr-48 md:w-20 md:-bottom-20 -bottom-16'
 			viewBox="0 0 90 87"
 			fill="none"
 			xmlns="http://www.w3.org/2000/svg"

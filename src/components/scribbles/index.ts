@@ -7,6 +7,7 @@ import ArrowZigZag from "./ArrowZigZag";
 import Butterfly from "./Butterfly";
 import Gem from "./Gem";
 import Sparkle from "./Sparkle";
+import Bulb from "./Bulb";
 
 const Scribble = {
 	Twist,
@@ -17,7 +18,8 @@ const Scribble = {
 	ArrowZigZag,
 	Butterfly,
 	Gem,
-	Sparkle
+	Sparkle,
+	Bulb
 }
 
 export default Scribble;
