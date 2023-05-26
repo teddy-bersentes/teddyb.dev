@@ -22,6 +22,9 @@ module.exports = {
 					gray: "#4E4E4E",
 				},
 			},
+			borderRadius: {
+				"4xl": "1.875rem",
+			},
 		},
 	},
 	plugins: [],

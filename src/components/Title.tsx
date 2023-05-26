@@ -1,6 +1,6 @@
 import { useState } from "react"
 import { motion, useMotionValueEvent, useScroll } from "framer-motion"
-import Scribble from "./scribbles"
+import Scribble from "~/components/scribbles"
 
 type Props = {
 	type: 'professional' | 'freelance' | 'personal'
@@ -46,16 +46,28 @@ function ProfessionalTitle() {
 
 function FreelanceTitle() {
 	return (
-		<div>
-			{/* TODO */}
+		<div className='relative flex flex-col items-end gap-3 pt-48'>
+			<h1 className='text-3xl font-bold leading-[3rem] text-right'>
+				I also do some<br className='min-[530px]:hidden block' /><span className='text-t-blue'> freelance</span> stuff
+			</h1>
+
+			<svg className='w-full md:w-3/4' viewBox="0 0 717 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+				<path d="M1.89258 7.93216C31.0835 7.1213 60.137 3.49452 89.3492 2.64066C132.696 1.37366 176.117 2.07014 219.432 4.03703C269.795 6.32397 319.862 11.2049 370.313 11.6803C448.838 12.4202 527.154 7.02453 605.637 6.79302C633.122 6.71194 660.576 7.50863 688.023 8.88757C696.436 9.31024 706.68 8.76691 714.921 11.2393" stroke="black" strokeWidth="3" strokeLinecap="round" />
+			</svg>
+
+			<Scribble.UFO />
+			<Scribble.ArrowSpiral />
 		</div>
 	)
 }
 
 function PersonalTitle() {
 	return (
-		<div>
-			{/* TODO */}
+		<div className='relative flex flex-col items-center justify-center mt-32 text-center'>
+			<h1 className='md:text-5xl xs:text-[2.5rem] text-[1.75rem] font-bold'>Some cool side projects</h1>
+			<p className='max-w-[36rem] mt-6 text-xl font-medium leading-8'>
+				Dive into the realm of my creations, where curiosity and coffee turn ideas into reality
+			</p>
 		</div>
 	)
 }
@@ -66,6 +78,6 @@ const components = {
 	'personal': PersonalTitle
 }
 
-export default function SectionTitle({ type }: Props) {
+export default function Title({ type }: Props) {
 	return components[type]()
 }
