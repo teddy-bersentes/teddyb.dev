@@ -10,9 +10,9 @@ export default function Home() {
 			<div className='flex w-full min-[1164px]:px-0 sm:px-16 xs:px-10 px-4 justify-center'>
 				<motion.div
 					className='flex flex-col justify-center w-full min-[1164px]:max-w-5xl py-24'
-					initial={{ opacity: 0, y: -20 }}
+					initial={{ opacity: 0, y: -12 }}
 					animate={{ opacity: 1, y: 0 }}
-					transition={{ delay: 0.5 }}
+					transition={{ type: 'spring', duration: 0.5, bounce: 0, delay: 0.4 }}
 				>
 					<Title type='professional' />
 

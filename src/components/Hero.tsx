@@ -26,12 +26,11 @@ function Hero() {
 		<div className='relative flex flex-col items-center justify-center w-full pb-16 pt-28'>
 			<div className='max-w-[52.3125rem] flex flex-col justify-center items-center relative px-4' >
 				<motion.div
-					className='absolute flex flex-col items-center justify-center w-full h-full pointer-events-none'
-					initial={{ opacity: 0, y: 20 }}
-					animate={{ opacity: 1, y: 0 }}
-					transition={{ delay: 0.30 }}
+					className='absolute flex flex-col items-center justify-center w-full h-full opacity-0 pointer-events-none'
+					initial={{ opacity: 0, scale: 0.9 }}
+					animate={{ opacity: 1, scale: 1 }}
+					transition={{ type: 'spring', duration: 0.6, bounce: 0, delay: 0.7 }}
 				>
-
 					<Scribble.Twist />
 					<Scribble.Shapes />
 					<Scribble.Planet />
@@ -47,7 +46,7 @@ function Hero() {
 					className='flex flex-col items-center justify-center w-full'
 					initial={{ y: -20 }}
 					animate={{ y: 0 }}
-				// transition={{ type: 'spring', damping: 22, stiffness: 70, velocity: 20 }}
+					transition={{ type: 'spring', duration: 0.5, bounce: 0 }}
 				>
 					<p className='text-lg font-semibold text-center md:text-xl'>Hi, I&apos;m Teddy</p>
 					<h1 className='md:text-5xl xs:text-[2.5rem] text-[1.75rem] font-bold max-w-[52.3125rem] text-center mt-4 md:leading-[4.5rem] xs:px-4 px-0'>
@@ -61,9 +60,9 @@ function Hero() {
 					</h1>
 
 					<motion.div
-						initial={{ opacity: 0, y: -10 }}
-						animate={{ opacity: 1, y: 0 }}
-						transition={{ delay: 0.3 }}
+						initial={{ opacity: 0, scale: 0.85 }}
+						animate={{ opacity: 1, scale: 1 }}
+						transition={{ type: 'spring', duration: 0.5, bounce: 0, delay: 0.7 }}
 					>
 						<Button className='mt-10'>
 							Show me more
