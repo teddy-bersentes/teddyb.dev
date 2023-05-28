@@ -1,17 +1,24 @@
 import Hero from "~/components/Hero";
 import Title from "~/components/Title";
+import Card from "~/components/cards";
+import { motion } from "framer-motion";
 
 export default function Home() {
 	return (
-		<div className='flex flex-col items-center w-full h-full min-h-screen overflow-scroll bg-t-bg'>
+		<div className='relative flex flex-col items-center w-full h-full min-h-screen overflow-scroll bg-t-bg no-scrollbar'>
 			<Hero />
 			<div className='flex w-full min-[1164px]:px-0 sm:px-16 xs:px-10 px-4 justify-center'>
-				<div className='flex flex-col justify-center w-full min-[1164px]:max-w-5xl py-24'>
+				<motion.div
+					className='flex flex-col justify-center w-full min-[1164px]:max-w-5xl py-24'
+					initial={{ opacity: 0, y: -20 }}
+					animate={{ opacity: 1, y: 0 }}
+					transition={{ delay: 0.5 }}
+				>
 					<Title type='professional' />
 
 					<div className='flex flex-col items-center justify-center mt-16 lg:gap-12 gap-28 lg:flex-row'>
-						<div className='w-full bg-purple-300 h-96 lg:w-96 rounded-4xl' />
-						<div className='w-full bg-red-300 lg:grow lg:w-auto h-96 rounded-4xl' />
+						<Card.SiteCommsMobile />
+						<Card.SiteCommsPortal />
 					</div>
 
 					<div className='w-full bg-orange-300 mt-28 h-96 rounded-4xl' />
@@ -26,7 +33,7 @@ export default function Home() {
 					</div>
 
 					<Title type='personal' />
-				</div>
+				</motion.div>
 			</div>
 		</div>
 	)
