@@ -39,8 +39,7 @@ export default function Home() {
 
 					<div className='flex flex-col items-center justify-center lg:flex-row lg:gap-12 mt-28 gap-28'>
 						<Card.Tabloid />
-						<Card.LifeSphere />
-						{/* <div className='bg-green-300 h-96 lg:w-[23.125rem] w-full rounded-4xl' /> */}
+						<Card.TabloidAlt />
 					</div>
 
 					<Title type='personal' />

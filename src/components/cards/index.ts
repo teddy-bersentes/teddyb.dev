@@ -3,7 +3,7 @@ import SiteCommsPortal from "./SiteCommsPortal";
 import MiiPlan from "./MiiPlan";
 import SmileFood from "./SmileFood";
 import Tabloid from "./Tabloid";
-import LifeSphere from "./LifeSphere";
+import TabloidAlt from "./TabloidAlt";
 
 const Card = {
 	SiteCommsMobile,
@@ -11,7 +11,7 @@ const Card = {
 	MiiPlan,
 	SmileFood,
 	Tabloid,
-	LifeSphere
+	TabloidAlt
 }
 
 export default Card;

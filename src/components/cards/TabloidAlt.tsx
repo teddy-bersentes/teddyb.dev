@@ -20,7 +20,7 @@ export default function LifeSphere() {
 			<h1 className='font-bold xs:text-[2.5rem] text-4xl leading-10 mt-2'>Social Media</h1>
 
 			<motion.div
-				className='relative flex self-center lg:w-[90%] w-64 aspect-[0.49] mt-8'
+				className='absolute flex self-center w-64 h-[32.25rem] -bottom-[70%]'
 				variants={phone}
 				transition={transition}
 			>
