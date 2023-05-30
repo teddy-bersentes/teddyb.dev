@@ -4,7 +4,6 @@ import Scribbles from "~/components/scribbles"
 import { useState } from "react"
 import Browser from "~/components/Browser"
 import Image from "next/image"
-import { useSound } from "use-sound"
 import clsx from "clsx"
 
 const browser: Variants = {
@@ -14,7 +13,6 @@ const browser: Variants = {
 
 export default function RSB() {
 	const [hovering, setHovering] = useState(false)
-	const [playSound] = useSound('/sounds/bang.mp3', { volume: 0.5 })
 
 	return (
 		<div className='relative w-full lg:grow lg:w-auto'>
@@ -24,10 +22,7 @@ export default function RSB() {
 				initial='initial'
 				whileHover='hover'
 				className='relative flex flex-col w-full overflow-hidden bg-white pt-7 px-9 lg:grow lg:w-auto h-96 rounded-4xl hover:cursor-pointer'
-				onHoverStart={() => {
-					setHovering(true)
-					playSound()
-				}}
+				onHoverStart={() => setHovering(true)}
 				onHoverEnd={() => setHovering(false)}
 			>
 				<h2 className='relative z-20 text-xl font-medium leading-5 text-t-gray'>PERSONAL PROJECT</h2>
