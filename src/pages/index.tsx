@@ -3,6 +3,7 @@ import Title from "~/components/Title";
 import Card from "~/components/cards";
 import { motion } from "framer-motion";
 import Head from "next/head";
+import Footer from "~/components/Footer";
 
 export default function Home() {
 	return (
@@ -37,13 +38,26 @@ export default function Home() {
 					<Card.SmileFood />
 
 					<div className='flex flex-col items-center justify-center lg:flex-row lg:gap-12 mt-28 gap-28'>
-						<div className='w-full bg-pink-300 lg:grow h-96 lg:w-auto rounded-4xl' />
-						<div className='bg-green-300 h-96 lg:w-[23.125rem] w-full rounded-4xl' />
+						<Card.Tabloid />
+						<Card.LifeSphere />
+						{/* <div className='bg-green-300 h-96 lg:w-[23.125rem] w-full rounded-4xl' /> */}
 					</div>
 
 					<Title type='personal' />
+
+					<div className='flex flex-col items-center justify-center mt-36 lg:gap-12 gap-28 lg:flex-row-reverse'>
+						<div className='relative flex flex-col w-full overflow-hidden bg-red-300 h-96 lg:w-96 rounded-4xl pt-7 px-9 hover:cursor-pointer' />
+						<div className='relative flex flex-col w-full overflow-hidden bg-blue-300 pt-7 px-9 lg:grow lg:w-auto h-96 rounded-4xl hover:cursor-pointer' />
+					</div>
+
+					<div className='flex flex-col items-center justify-center mt-36 lg:gap-12 gap-28 lg:flex-row'>
+						<div className='relative flex flex-col w-full overflow-hidden bg-lime-300 h-96 lg:basis-1/2 rounded-4xl pt-7 px-9 hover:cursor-pointer' />
+						<div className='relative flex flex-col w-full overflow-hidden bg-amber-300 pt-7 px-9 lg:basis-1/2 lg:w-auto h-96 rounded-4xl hover:cursor-pointer' />
+					</div>
 				</motion.div>
 			</div>
+
+			<Footer />
 		</div>
 	)
 }

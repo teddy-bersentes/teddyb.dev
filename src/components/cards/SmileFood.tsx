@@ -1,29 +1,8 @@
 import Image from "next/image"
-import { motion, Variants, Transition } from "framer-motion"
+import { motion, Variants } from "framer-motion"
+import { springTransition as transition, cardVariants as card } from "~/utils/animation"
 import { useState } from "react"
 import Scribble from "~/components/scribbles"
-
-const transition: Transition = {
-	type: 'spring',
-	stiffness: 100,
-	damping: 20,
-	bounce: 0,
-	mass: 0.4
-}
-
-
-const card: Variants = {
-	initial: {
-		y: 0,
-		rotate: 0.00,
-		boxShadow: '0px 0px 22px rgba(0, 0, 0, 0.0)',
-	},
-	hover: {
-		y: -4,
-		rotate: 0.02,
-		boxShadow: '0px 0px 22px rgba(0, 0, 0, 0.02)',
-	}
-}
 
 const primary: Variants = {
 	initial: { y: 0, rotate: 0.00 },

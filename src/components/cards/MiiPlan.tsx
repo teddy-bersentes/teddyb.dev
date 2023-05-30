@@ -1,5 +1,6 @@
 import clsx, { ClassValue } from "clsx";
-import { Transition, motion, Variants } from "framer-motion";
+import { motion, Variants } from "framer-motion";
+import { cardVariants as card, springTransition as transition } from "~/utils/animation";
 import Browser from "../Browser";
 import Image from "next/image";
 
@@ -41,27 +42,6 @@ function Cable({ width, height, path, className }: CableProps) {
 	)
 }
 
-const transition: Transition = {
-	type: 'spring',
-	stiffness: 100,
-	damping: 20,
-	bounce: 0,
-	mass: 0.4
-}
-
-const card: Variants = {
-	initial: {
-		y: 0,
-		rotate: 0.00,
-		boxShadow: '0px 0px 22px rgba(0, 0, 0, 0.0)',
-	},
-	hover: {
-		y: -4,
-		rotate: 0.02,
-		boxShadow: '0px 0px 22px rgba(0, 0, 0, 0.02)',
-	}
-}
-
 const browser: Variants = {
 	initial: { y: 0, rotate: 0.00 },
 	hover: { y: -20, rotate: 0.02, transition }
@@ -77,7 +57,11 @@ export default function MiiPlan() {
 			className='relative w-full overflow-hidden bg-white cursor-pointer pt-7 px-9 mt-28 h-96 rounded-4xl'
 		>
 			<div className="absolute inset-0 z-0 bg-[url(/grid.svg)] bg-center" />
-			<div className='absolute inset-0 z-10 w-full h-full circle-gradient' />
+			<div
+				className='absolute inset-0 w-full h-full z-[5]'
+				style={{ background: 'radial-gradient(60% 50% at 50% 50%, rgba(217, 217, 217, 0) 0%, #ffffff 100%)' }}
+			/>
+
 			<h2 className='relative z-20 text-xl font-medium leading-5 text-t-gray'>MIIPLAN</h2>
 			<h1 className='font-bold relative z-20 xs:text-[2.5rem] text-4xl leading-10 mt-2'>AI Legal Plans</h1>
 

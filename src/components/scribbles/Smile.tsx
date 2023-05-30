@@ -40,7 +40,7 @@ type Props = {
 export default function Smile({ visible }: Props) {
 
 	return (
-		<svg className='absolute w-24 mt-24 bottom-8 left-8 -rotate-12' viewBox="0 0 141 150" fill="none" xmlns="http://www.w3.org/2000/svg">
+		<svg className='absolute w-16 mt-24 bottom-10 left-10 -rotate-12' viewBox="0 0 141 150" fill="none" xmlns="http://www.w3.org/2000/svg">
 			<motion.path
 				variants={leftEye}
 				initial='hidden'

@@ -53,6 +53,8 @@ function PersonalTitle() {
 			<p className='max-w-[36rem] mt-6 text-lg xs:text-xl font-medium leading-8'>
 				Dive into the realm of my creations, where curiosity and coffee turn ideas into reality
 			</p>
+			<Scribble.Airplane />
+			<Scribble.Moon />
 		</div>
 	)
 }

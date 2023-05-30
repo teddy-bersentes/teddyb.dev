@@ -11,6 +11,8 @@ import Bulb from "./Bulb";
 import UFO from "./Ufo";
 import ArrowSpiral from "./ArrowSpiral";
 import Smile from "./Smile";
+import Airplane from "./Airplane";
+import Moon from "./Moon";
 
 const Scribble = {
 	Twist,
@@ -25,7 +27,9 @@ const Scribble = {
 	Bulb,
 	UFO,
 	ArrowSpiral,
-	Smile
+	Smile,
+	Airplane,
+	Moon
 }
 
 export default Scribble;
