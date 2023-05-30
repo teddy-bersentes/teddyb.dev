@@ -29,7 +29,7 @@ function Hero() {
 					className='absolute flex flex-col items-center justify-center w-full h-full opacity-0 pointer-events-none'
 					initial={{ opacity: 0, scale: 0.9 }}
 					animate={{ opacity: 1, scale: 1 }}
-					transition={{ type: 'spring', duration: 0.6, bounce: 0, delay: 0.7 }}
+					transition={{ type: 'spring', duration: 0.6, bounce: 0, delay: 0.8 }}
 				>
 					<Scribble.Twist />
 					<Scribble.Shapes />
@@ -44,9 +44,9 @@ function Hero() {
 
 				<motion.div
 					className='flex flex-col items-center justify-center w-full'
-					initial={{ y: -20 }}
+					initial={{ y: -10 }}
 					animate={{ y: 0 }}
-					transition={{ type: 'spring', duration: 0.5, bounce: 0 }}
+					transition={{ type: 'spring', duration: 0.3, bounce: 0 }}
 				>
 					<p className='text-lg font-semibold text-center md:text-xl'>Hi, I&apos;m Teddy</p>
 					<h1 className='md:text-5xl xs:text-[2.5rem] text-[1.75rem] font-bold max-w-[52.3125rem] text-center mt-4 md:leading-[4.5rem] xs:px-4 px-0'>
@@ -62,7 +62,7 @@ function Hero() {
 					<motion.div
 						initial={{ opacity: 0, scale: 0.85 }}
 						animate={{ opacity: 1, scale: 1 }}
-						transition={{ type: 'spring', duration: 0.5, bounce: 0, delay: 0.7 }}
+						transition={{ type: 'spring', duration: 0.5, bounce: 0, delay: 0.8 }}
 					>
 						<Button className='mt-10'>
 							Show me more

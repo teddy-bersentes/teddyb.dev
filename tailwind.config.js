@@ -14,6 +14,10 @@ module.exports = {
 			},
 			fontFamily: {
 				sans: ["var('--font-poppins')"],
+				inter: ["var(--font-inter)"],
+			},
+			fontSize: {
+				fluid: "clamp(0.625rem, 0.30231rem + 0.7692vw, 1rem)",
 			},
 			colors: {
 				t: {
@@ -30,7 +34,7 @@ module.exports = {
 		},
 	},
 	plugins: [
-		plugin(function ({ addUtilities }) {
+		plugin(function ({ addUtilities, addVariant }) {
 			addUtilities({
 				".no-scrollbar": {
 					"&::-webkit-scrollbar": {
@@ -39,6 +43,15 @@ module.exports = {
 					"-ms-overflow-style": "none",
 					"scrollbar-width": "none",
 				},
+			});
+
+			addVariant("em", ({ container }) => {
+				container.walkRules((rule) => {
+					rule.selector = `.em\\:${rule.selector.slice(1)}`;
+					rule.walkDecls((decl) => {
+						decl.value = decl.value.replace("rem", "em");
+					});
+				});
 			});
 		}),
 	],

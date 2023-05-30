@@ -9,7 +9,7 @@ const transition: Transition = {
 	mass: 0.4
 }
 
-const containerVariants: Variants = {
+const card: Variants = {
 	initial: {
 		y: 0,
 		rotate: 0.00,
@@ -22,33 +22,26 @@ const containerVariants: Variants = {
 	}
 }
 
-const windowVariants: Variants = {
-	initial: {
-		y: 0,
-		rotate: 0.00
-	},
-	hover: {
-		y: -8,
-		rotate: 0.02,
-		transition
-	}
+const browser: Variants = {
+	initial: { y: 0, rotate: 0.00 },
+	hover: { y: -8, rotate: 0.02, transition }
 }
 
 export default function SiteCommsPortal() {
 	return (
 		<motion.div
 			className='relative flex flex-col w-full overflow-hidden bg-white pt-7 px-9 lg:grow lg:w-auto h-96 rounded-4xl hover:cursor-pointer'
-			variants={containerVariants}
-			initial={'initial'}
-			whileHover={'hover'}
+			variants={card}
+			initial='initial'
+			whileHover='hover'
 			transition={transition}
 		>
 			<div className="absolute top-0 left-0 w-full h-full bg-repeat bg-[url('/topography.svg')]" />
 			<h2 className='text-xl font-medium leading-5 text-t-gray'>SITE COMMS</h2>
 			<h1 className='font-bold xs:text-[2.5rem] text-4xl leading-10 mt-2'>Admin Portal</h1>
 			<motion.div
-				className='absolute flex self-center sm:w-[32rem] w-[28rem] lg:-right-20 sm:-right-8 -right-20 lg:top-36 top-32'
-				variants={windowVariants}
+				className='absolute flex self-center sm:w-[32rem] w-[28rem] lg:left-40 sm:left-8 left-20 lg:top-36 top-32'
+				variants={browser}
 				transition={transition}
 			>
 				<Image

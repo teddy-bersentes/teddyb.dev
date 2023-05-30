@@ -9,7 +9,7 @@ const transition: Transition = {
 	mass: 0.4
 }
 
-const containerVariants: Variants = {
+const card: Variants = {
 	initial: {
 		y: 0,
 		rotate: 0.00,
@@ -22,25 +22,18 @@ const containerVariants: Variants = {
 	}
 }
 
-const phoneVariants: Variants = {
-	initial: {
-		y: 0,
-		rotate: 0.00
-	},
-	hover: {
-		y: -8,
-		rotate: 0.02,
-		transition
-	}
+const phone: Variants = {
+	initial: { y: 0, rotate: 0.00 },
+	hover: { y: -8, rotate: 0.02, transition }
 }
 
 export default function SiteCommsMobile() {
 	return (
 		<motion.div
 			className='relative flex flex-col w-full overflow-hidden bg-white h-96 lg:w-96 rounded-4xl pt-7 px-9 hover:cursor-pointer'
-			variants={containerVariants}
-			initial={'initial'}
-			whileHover={'hover'}
+			variants={card}
+			initial='initial'
+			whileHover='hover'
 			transition={transition}
 		>
 			<div className="absolute top-0 left-0 w-full h-full bg-repeat bg-[url('/topography.svg')]" />
@@ -50,7 +43,7 @@ export default function SiteCommsMobile() {
 
 			<motion.div
 				className='absolute flex self-center w-64 h-[32.25rem] -bottom-[70%]'
-				variants={phoneVariants}
+				variants={phone}
 				transition={transition}
 			>
 				<Image
