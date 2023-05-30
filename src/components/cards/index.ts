@@ -4,6 +4,8 @@ import MiiPlan from "./MiiPlan";
 import SmileFood from "./SmileFood";
 import Tabloid from "./Tabloid";
 import TabloidAlt from "./TabloidAlt";
+import RSB from "./RSB";
+import CookingPlus from "./CookingPlus";
 
 const Card = {
 	SiteCommsMobile,
@@ -11,7 +13,9 @@ const Card = {
 	MiiPlan,
 	SmileFood,
 	Tabloid,
-	TabloidAlt
+	TabloidAlt,
+	RSB,
+	CookingPlus
 }
 
 export default Card;

@@ -13,6 +13,7 @@ import ArrowSpiral from "./ArrowSpiral";
 import Smile from "./Smile";
 import Airplane from "./Airplane";
 import Moon from "./Moon";
+import CowboyHat from "./CowboyHat";
 
 const Scribble = {
 	Twist,
@@ -29,7 +30,8 @@ const Scribble = {
 	ArrowSpiral,
 	Smile,
 	Airplane,
-	Moon
+	Moon,
+	CowboyHat
 }
 
 export default Scribble;

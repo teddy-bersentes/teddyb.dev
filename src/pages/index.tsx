@@ -45,8 +45,8 @@ export default function Home() {
 					<Title type='personal' />
 
 					<div className='flex flex-col items-center justify-center mt-36 lg:gap-12 gap-28 lg:flex-row-reverse'>
-						<div className='relative flex flex-col w-full overflow-hidden bg-red-300 h-96 lg:w-96 rounded-4xl pt-7 px-9 hover:cursor-pointer' />
-						<div className='relative flex flex-col w-full overflow-hidden bg-blue-300 pt-7 px-9 lg:grow lg:w-auto h-96 rounded-4xl hover:cursor-pointer' />
+						<Card.CookingPlus />
+						<Card.RSB />
 					</div>
 
 					<div className='flex flex-col items-center justify-center mt-36 lg:gap-12 gap-28 lg:flex-row'>
