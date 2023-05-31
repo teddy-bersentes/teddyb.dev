@@ -1,6 +1,6 @@
 export default function PalmTrees() {
 	return (
-		<svg className='absolute -bottom-1 sm:right-[22%] left-6 md:w-32 sm:w-28 w-24' viewBox="0 0 130 149" fill="none" xmlns="http://www.w3.org/2000/svg">
+		<svg className='absolute -bottom-1 sm:right-[22%] sm:left-auto right-auto left-6 md:w-32 sm:w-28 w-24' viewBox="0 0 130 149" fill="none" xmlns="http://www.w3.org/2000/svg">
 			<path d="M55.5044 74.2984C47.7779 72.7925 42.2158 77.0501 37.6758 83.2386" stroke="black" strokeOpacity="0.9" strokeWidth="8" strokeLinecap="round" strokeLinejoin="round" />
 			<path d="M43.6211 66.0703C49.5419 66.7338 54.0623 69.1513 57.4878 73.9942" stroke="black" strokeOpacity="0.9" strokeWidth="8" strokeLinecap="round" strokeLinejoin="round" />
 			<path d="M57.4863 75.3145C63.0224 76.657 66.8646 80.164 69.3721 84.5589" stroke="black" strokeOpacity="0.9" strokeWidth="8" strokeLinecap="round" strokeLinejoin="round" />

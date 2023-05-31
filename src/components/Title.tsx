@@ -38,7 +38,7 @@ function FreelanceTitle() {
 				<path d="M1.89258 7.93216C31.0835 7.1213 60.137 3.49452 89.3492 2.64066C132.696 1.37366 176.117 2.07014 219.432 4.03703C269.795 6.32397 319.862 11.2049 370.313 11.6803C448.838 12.4202 527.154 7.02453 605.637 6.79302C633.122 6.71194 660.576 7.50863 688.023 8.88757C696.436 9.31024 706.68 8.76691 714.921 11.2393" stroke="black" strokeWidth="3" strokeLinecap="round" />
 			</svg>
 
-			<Scribble.UFO />
+			<Scribble.UFO className='absolute md:h-16 h-14 top-16 right-1/4' />
 			<Scribble.ArrowSpiral />
 		</div>
 	)

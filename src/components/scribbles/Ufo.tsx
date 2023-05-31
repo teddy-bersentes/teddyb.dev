@@ -1,10 +1,15 @@
+import clsx from "clsx"
 import { motion } from "framer-motion"
 import { infiniteTransition } from "~/utils/animation"
 
-export default function UFO() {
+type Props = {
+	className?: string
+}
+
+export default function UFO({ className }: Props) {
 	return (
 		<motion.svg
-			className='absolute md:h-16 h-14 top-16 right-1/4'
+			className={clsx(className)}
 			viewBox="0 0 94 63"
 			fill="none"
 			xmlns="http://www.w3.org/2000/svg"

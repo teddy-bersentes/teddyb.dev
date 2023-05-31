@@ -20,6 +20,10 @@ import JumpingPerson from "./JumpingPerson";
 import Climber from "./Climber";
 import PalmTrees from "./PalmTrees";
 import Stars from "./Stars";
+import Astronaut from "./Astronaut";
+import Meteor from "./Meteor";
+import PaperDove from "./PaperDove";
+import Giraffe from "./Giraffe";
 
 const Scribble = {
 	Twist,
@@ -43,7 +47,11 @@ const Scribble = {
 	JumpingPerson,
 	Climber,
 	PalmTrees,
-	Stars
+	Stars,
+	Astronaut,
+	Meteor,
+	PaperDove,
+	Giraffe
 }
 
 export default Scribble;
