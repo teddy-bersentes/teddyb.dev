@@ -14,6 +14,12 @@ import Smile from "./Smile";
 import Airplane from "./Airplane";
 import Moon from "./Moon";
 import CowboyHat from "./CowboyHat";
+import Pizza from "./Pizza";
+import Thinking from "./Thinking";
+import JumpingPerson from "./JumpingPerson";
+import Climber from "./Climber";
+import PalmTrees from "./PalmTrees";
+import Stars from "./Stars";
 
 const Scribble = {
 	Twist,
@@ -31,7 +37,13 @@ const Scribble = {
 	Smile,
 	Airplane,
 	Moon,
-	CowboyHat
+	CowboyHat,
+	Pizza,
+	Thinking,
+	JumpingPerson,
+	Climber,
+	PalmTrees,
+	Stars
 }
 
 export default Scribble;

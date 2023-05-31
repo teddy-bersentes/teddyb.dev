@@ -4,7 +4,7 @@ import { infiniteTransition } from "~/utils/animation"
 export default function Moon() {
 	return (
 		<motion.svg
-			className='w-[4.125rem] absolute left-8 lg:-top-8 -top-24'
+			className='md:w-[4.125rem] w-12 absolute left-8 lg:-top-8 -top-24'
 			viewBox="0 0 69 75"
 			fill="none"
 			xmlns="http://www.w3.org/2000/svg"

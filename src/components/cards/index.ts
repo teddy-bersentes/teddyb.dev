@@ -6,6 +6,8 @@ import Tabloid from "./Tabloid";
 import TabloidAlt from "./TabloidAlt";
 import RSB from "./RSB";
 import CookingPlus from "./CookingPlus";
+import Physarum from "./Physarum";
+import Self from "./Self";
 
 const Card = {
 	SiteCommsMobile,
@@ -15,7 +17,9 @@ const Card = {
 	Tabloid,
 	TabloidAlt,
 	RSB,
-	CookingPlus
+	CookingPlus,
+	Physarum,
+	Self
 }
 
 export default Card;

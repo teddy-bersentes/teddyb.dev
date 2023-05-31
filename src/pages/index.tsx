@@ -19,7 +19,7 @@ export default function Home() {
 			<Hero />
 			<div className='flex w-full min-[1164px]:px-0 sm:px-16 xs:px-10 px-4 justify-center'>
 				<motion.div
-					className='flex flex-col justify-center w-full min-[1164px]:max-w-5xl py-24'
+					className='flex flex-col justify-center w-full min-[1164px]:max-w-5xl pt-24'
 					initial={{ opacity: 0, y: -12 }}
 					animate={{ opacity: 1, y: 0 }}
 					transition={{ type: 'spring', duration: 0.5, bounce: 0, delay: 0.3 }}
@@ -50,8 +50,8 @@ export default function Home() {
 					</div>
 
 					<div className='flex flex-col items-center justify-center mt-36 lg:gap-12 gap-28 lg:flex-row'>
-						<div className='relative flex flex-col w-full overflow-hidden bg-lime-300 h-96 lg:basis-1/2 rounded-4xl pt-7 px-9 hover:cursor-pointer' />
-						<div className='relative flex flex-col w-full overflow-hidden bg-amber-300 pt-7 px-9 lg:basis-1/2 lg:w-auto h-96 rounded-4xl hover:cursor-pointer' />
+						<Card.Self />
+						<Card.Physarum />
 					</div>
 				</motion.div>
 			</div>

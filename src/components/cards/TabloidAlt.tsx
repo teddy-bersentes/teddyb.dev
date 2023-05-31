@@ -3,8 +3,8 @@ import Image from "next/image"
 import { cardVariants as card, springTransition as transition } from "~/utils/animation"
 
 const phone: Variants = {
-	initial: { y: 0, rotate: 0.00 },
-	hover: { y: -8, rotate: 0.02, transition }
+	initial: { y: 0, rotate: 0.02 },
+	hover: { y: -10, rotate: 0.02, transition }
 }
 
 export default function LifeSphere() {
@@ -30,8 +30,6 @@ export default function LifeSphere() {
 					fill
 				/>
 			</motion.div>
-
-			<div />
 		</motion.div>
 	)
 }
