@@ -1,6 +1,7 @@
 import Scribble from "~/components/scribbles";
 import Button from "./Button";
 import Link from "next/link";
+import { motion } from "framer-motion";
 
 export default function Footer() {
 	return (
@@ -10,7 +11,10 @@ export default function Footer() {
 					Want to<br className='block sm:hidden' /> reach out?
 				</h1>
 
-				<Button className='px-12 sm:mb-16'>
+				<Button
+					className='px-12 sm:mb-16'
+					onClick={() => window.open('mailto:theodore.bersentes@gmail.com')}
+				>
 					Contact Me
 				</Button>
 
@@ -21,7 +25,9 @@ export default function Footer() {
 				<Scribble.Meteor />
 				<Scribble.PaperDove />
 				<Scribble.Stars />
-				<Scribble.UFO className='absolute w-20 right-[8%] top-12 sm:block hidden' />
+				<motion.div whileInView={{ opacity: 1 }} initial={{ opacity: 0 }} transition={{ delay: 1.2, duration: 0.6 }}>
+					<Scribble.UFO className='absolute w-20 right-[8%] top-12 sm:block hidden' />
+				</motion.div>
 				<Scribble.Giraffe />
 			</div>
 

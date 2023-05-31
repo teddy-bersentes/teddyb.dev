@@ -1,6 +1,7 @@
-import { type Variants, type Transition } from 'framer-motion'
+import { type Variants, type Transition, useInView } from 'framer-motion'
+import { useCallback, useEffect, useState } from 'react'
 
-export const infiniteTransition: Partial<Transition> = {
+export const infiniteTransition: Transition = {
 	repeat: Infinity,
 	repeatType: 'mirror',
 	ease: 'easeInOut'
@@ -19,10 +20,30 @@ export const cardVariants: Variants = {
 	}
 }
 
+export const lineVariants: Variants = {
+	hidden: { opacity: 0, pathLength: 0 },
+	visible: { opacity: 1, pathLength: 1 }
+}
+
 export const springTransition: Transition = {
 	type: 'spring',
 	stiffness: 100,
 	damping: 20,
 	bounce: 0,
 	mass: 0.4
+}
+
+type Params = Parameters<typeof useInView>
+
+export const useVisibility = (...params: Params) => {
+	const isInView = useInView(...params)
+	const [visible, setVisible] = useState(false)
+
+	const handleStateChange = useCallback(() => {
+		if (isInView) setVisible(true)
+	}, [isInView])
+
+	useEffect(() => handleStateChange(), [isInView, handleStateChange])
+
+	return visible
 }

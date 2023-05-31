@@ -9,8 +9,8 @@ export default function JumpingPerson() {
 	const handleStateChange = useCallback(() => {
 		if (isInView) {
 			if (personState === 'standing') {
-				setTimeout(() => setPersonState('preparing'), 500)
-				setTimeout(() => setPersonState('jumping'), 1000)
+				setTimeout(() => setPersonState('preparing'), 3000)
+				setTimeout(() => setPersonState('jumping'), 3500)
 			}
 		}
 	}, [isInView, personState])
