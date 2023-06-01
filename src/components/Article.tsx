@@ -6,20 +6,23 @@ import Footer from "./Footer";
 type Props = {
 	title: string,
 	description: string,
+	topComponent?: () => React.ReactNode,
 	children?: React.ReactNode
 }
 
-export default function Article({ title, description, children }: Props) {
+export default function Article({ title, description, children, topComponent }: Props) {
 	return (
 		<MDXProvider components={MDComponents}>
 			<div className='relative flex flex-col items-center w-full h-full min-h-screen overflow-scroll bg-t-bg no-scrollbar'>
+				{topComponent && topComponent()}
+
 				<motion.div
 					className='flex flex-col text-center'
 					initial={{ y: -20, opacity: 0 }}
 					animate={{ y: 0, opacity: 1 }}
 					transition={{ type: 'spring', duration: 0.3, bounce: 0 }}
 				>
-					<h1 className='text-[clamp(1.5rem,1.7982rem+1.6143vw,8.8125rem)] font-bold max-w-[52.3125rem] text-center md:leading-[4.5rem] px-8 mt-20'>
+					<h1 className='text-[clamp(1.5rem,1.7982rem+1.6143vw,8.8125rem)] font-bold max-w-[52.3125rem] text-center md:leading-[4.5rem] px-8 mt-12'>
 						{title}
 					</h1>
 

@@ -1,7 +1,13 @@
+import unwrapImages from "remark-unwrap-images";
+import { createRequire } from "node:module";
+
+const require = createRequire(import.meta.url);
+
 const withMDX = require("@next/mdx")({
 	extension: /\.mdx?$/,
 	options: {
 		providerImportSource: "@mdx-js/react",
+		remarkPlugins: [unwrapImages],
 	},
 });
 
@@ -14,4 +20,4 @@ const nextConfig = {
 	},
 };
 
-module.exports = withMDX(nextConfig);
+export default withMDX(nextConfig);
