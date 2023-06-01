@@ -1,5 +1,5 @@
 import { MDXProvider } from "@mdx-js/react";
-import MDComponents from "./md";
+import MDComponents from "./projects/MD";
 import Footer from "./Footer";
 
 type Props = {

@@ -1,0 +1,78 @@
+import Article from "~/components/Article";
+
+# The Beginning
+
+Imagine you're on a construction site, and it's utter chaos. There's a guy on the forklift trying to navigate like it's a Grand Prix race, another team huddled up like they're planning a moon mission instead of a building, and the poor site manager? He's running around like a headless chicken trying to keep everyone on the same page. Sounds fun, right?
+
+After taking a look at what the market had to offer for construction management, I felt like I had stepped into a time machine - not the cool, 'Back to the Future' kind, but one that takes you back to the days when fax machines were the rage. The options were either the colossal ProCore or other alternatives that felt like they were coded by a T-Rex. It was clear; the construction industry needed a modern, SaaS-flavored shakeup. And thus, Site Comms was born
+
+So, what is this fresh, exciting platform that's about to revolutionize your construction site management, you ask? Well, Site Comms is the knight in shining armor for construction managers. It's the digital assistant that never sleeps, the watchful guardian that makes sure your workers come and go in harmony, and the beacon of efficiency that streamlines your most complicated processes.
+
+&nbsp;
+
+![A funny image of construction workers](https://ucarecdn.com/bd12dc13-ce5f-4e50-993f-068113c1c83e/constructioncartoon.webp)
+
+&nbsp;
+
+# The Problem that Needed Solving
+
+In the world of construction management, there are common practices and unique ones. For example, 'site inductions' - where everyone signs a document before entering the site - are standard across the board. However, procedures like reporting problems or hazards can vary significantly from site to site. Some builders follow robust protocols while others, shockingly, choose to ignore these critical safety measures, irrespective of legal and insurance requirements.
+
+A colleague once shared a rather disconcerting tale about a construction site he visited. Their hazard reporting system was nothing more than a collection of bright yellow post-it notes on a corkboard. The efficacy of this system was about as reliable as a sundial at midnight. Inclement weather would wash away any posted concerns, and issues reported after working hours were doomed to be ignored until the next day, leaving hazards unaddressed for far too long.
+
+Faced with such chaos, many builders opt to go 'Old School,' either reverting to paper or relying on clunky, poorly implemented solutions. For those dabbling in the 'more advanced' solutions, the simplicity and efficiency were as elusive as a unicorn. It got so bad that the Australian government had to step in, offering a whopping 120% tax deduction for builders willing to swap their paper scrolls for a digital solution. A literal, 'We'll pay you to stop this madness' scenario.
+
+&nbsp;
+
+# The Birth of Site Comms
+
+Creating Site Comms felt a lot like playing Jenga. We had a tower of preconceived notions of what construction management 'had to be'. But as we started pulling away the unnecessary blocks, an idea began to form. A realization hit us – everything in construction revolves around 'the site'. Workers, documents, hazards – they all had a single, unifying epicenter. So, we decided to question the status quo and redefine the standards for any construction site. Thus, the vision of a fully managed construction workflow, our own way, was born.
+
+&nbsp;
+
+![An image of elements for site commms](https://ucarecdn.com/1ca6e86c-1d15-400d-918f-925330fbe9a7/otherelements.png)
+
+&nbsp;
+
+Here are some of the features that we personnally loved the most:
+
+### Site Map
+
+Our admin portal, much like the helm of a ship, guides you through the vast sea of construction management. Dominating the screen is an interactive Google Maps-style map. Pinpoints mark each site, and with a click, you can zoom into the site details - personnel, hazards, currently checked-in workers, and more. You get a bird's-eye view and a worm's-eye view, all from the same screen.
+
+### Time Carding and Induction
+
+We've also tackled the industry's arch-nemesis - paperwork. Thanks to geofencing technology, we know when a worker is on-site and can prompt them to complete their induction on their phone. No more reams of forms with endless personal details, just a simple 'Read, Agree, and Go'. And rest assured, we've checked all the boxes for compliance with Australian law.
+
+### QR Code Onboarding
+
+We understand change can be challenging, especially when it comes to adopting new tech. So, we added unique QR codes on posters at each construction site. One quick scan lets workers download the app and join the site, making the transition as smooth as a perfectly poured concrete slab.
+
+&nbsp;
+
+# The Tech Behind the Solution
+
+Site Comms is a blend of tech ingredients, each chosen for its unique flavor, creating a full-bodied solution that's both robust and flexible. We married MongoDB, Nest.js, and GraphQL for the back-end, an alliance driven by the need for flexibility, speed, and real-time data handling. MongoDB's schema-less nature, combined with Nest.js's modular structure and GraphQL's efficient data-fetching capabilities, allowed us to serve complex data in the most streamlined way possible.
+
+When it came to the front-end, Next.js and TailwindCSS were the stars of our web development, accompanied by MapBox for that snazzy map page and Framer Motion to breathe life into our animations. The mobile front-end donned the colors of React Native. Throughout, our secret weapon was a server-state client, React Query, which took a lot of stress off our front-end clients and kept them light and fast.
+
+A notable innovation was our use of geofencing technology to create an interactive, real-time presence system. We ingeniously harnessed the power of GPS technology, setting a virtual perimeter for each construction site. The moment a worker steps into this virtual boundary, they're prompted to complete their induction and sign in. It&apos;s like having a diligent, invisible doorman who never takes a break.
+
+However, every masterpiece has its share of behind-the-scenes hurdles. One significant challenge was managing real-time data synchronization across multiple clients. With workers constantly moving in and out of sites, and hazards being reported at unpredictable intervals, ensuring seamless data updates was akin to juggling flaming torches while riding a unicycle. Thankfully, we overcame this using a combination of GraphQL subscriptions and strategic server-side logic to maintain reliable real-time updates, keeping everyone on the same page, or in this case, the same site.
+
+&nbsp;
+
+# Site Comms Today and Beyond
+
+Ever tried presenting a kid with a toy they didn't know they wanted? That's kind of how our first users reacted to Site Comms. From the moment we deployed to a small user group, we were inundated with positivity. Eyes widened, jaws dropped, and the air buzzed with phrases like 'unbelievably easy' and 'game changer'. It felt like we'd given them a magic wand that transformed their muddled management mess into a streamlined, simple system. And that's because we pretty much had. The impact was immediate and profound.
+
+While basking in this glow of user admiration, we're not resting on our laurels. The Site Comms train is moving full steam ahead. We're gearing up to launch a wait-list, steadily welcoming more users while refining the platform based on feedback and foresight. In the lab, our tech wizards are brewing some awe-inspiring features - imagine live translations and AI-managed construction sites. But let's keep that between us; after all, a magician never reveals all his secrets.
+
+export default ({ children }) => (
+	<Article
+		title="Site Comms"
+		description="Chief Technology Officer • Full stack development"
+	>
+		{children}
+	</Article>
+);

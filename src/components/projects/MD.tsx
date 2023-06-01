@@ -1,10 +1,10 @@
 import type { Components } from "@mdx-js/react/lib";
 
 const MDComponents: Components = {
-	h1: ({ ...props }) => <h1 className='mb-4 text-3xl font-semibold' {...props} />,
+	h1: ({ ...props }) => <h1 className='mb-6 text-3xl font-semibold' {...props} />,
 	h2: ({ ...props }) => <h2 className='mb-4 text-2xl font-semibold' {...props} />,
-	h3: ({ ...props }) => <h3 className='text-xl font-semibold' {...props} />,
-	p: ({ ...props }) => <p className='mb-4 text-lg leading-7' {...props} />,
+	h3: ({ ...props }) => <h3 className='mb-2 text-xl font-semibold' {...props} />,
+	p: ({ ...props }) => <p className='mb-5 text-lg leading-7' {...props} />,
 	strong: ({ ...props }) => <strong className='font-semibold' {...props} />,
 	blockquote: ({ ...props }) => <blockquote className='text-lg font-normal italic text-[#D2D2D2] border-l-4 border-[#d2d2d2] pl-4 my-4' {...props} />,
 	a: ({ ...props }) => <a className='transition-opacity text-t-blue hover:opacity-80 hover:underline' {...props} />,
