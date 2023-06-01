@@ -44,12 +44,12 @@ function Hero() {
 
 				<motion.div
 					className='flex flex-col items-center justify-center w-full'
-					initial={{ y: -10 }}
-					animate={{ y: 0 }}
+					initial={{ y: -20, opacity: 0 }}
+					animate={{ y: 0, opacity: 1 }}
 					transition={{ type: 'spring', duration: 0.3, bounce: 0 }}
 				>
 					<p className='text-lg font-semibold text-center md:text-xl'>Hi, I&apos;m Teddy</p>
-					<h1 className='md:text-5xl xs:text-[2.5rem] text-[1.75rem] font-bold max-w-[52.3125rem] text-center mt-4 md:leading-[4.5rem] xs:px-4 px-0'>
+					<h1 className='text-[clamp(1.5rem,1.4982rem+1.6143vw,8.8125rem)] font-bold max-w-[52.3125rem] text-center mt-4 md:leading-[4.5rem] xs:px-8 px-0'>
 						I specialize in
 						{' '}
 						<Color variant='red'>ideating</Color>,

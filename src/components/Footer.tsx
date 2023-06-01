@@ -7,7 +7,7 @@ export default function Footer() {
 	return (
 		<footer className='flex flex-col w-full max-w-[100vw] overflow-hidden'>
 			<div className='relative flex flex-col items-center justify-center w-full xs:h-[28rem] h-[26rem]'>
-				<h1 className='absolute text-4xl font-bold text-center sm:top-20 top-[4.5rem]'>
+				<h1 className='absolute text-[clamp(1.375rem,1.3837rem+.8163vw,2rem)] font-bold text-center sm:top-20 top-[4.5rem]'>
 					Want to<br className='block sm:hidden' /> reach out?
 				</h1>
 
