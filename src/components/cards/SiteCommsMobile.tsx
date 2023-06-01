@@ -19,7 +19,7 @@ export default function SiteCommsMobile() {
 			<div className="absolute top-0 left-0 w-full h-full bg-repeat bg-[url('/topography.svg')]" />
 
 			<h2 className='text-xl font-medium leading-5 text-t-gray'>SITE COMMS</h2>
-			<h1 className='font-bold xs:text-[2.5rem] text-4xl leading-10 mt-2'>Time Carding</h1>
+			<h1 className='font-bold xs:text-[2.5rem] text-4xl leading-10 mt-2'>Mobile App</h1>
 
 			<motion.div
 				className='absolute flex self-center w-64 h-[32.25rem] -bottom-[70%]'
