@@ -1,0 +1,96 @@
+import Article from "~/components/Article";
+import MiiPlanRobot from "~/components/projects/MiiPlanRobot";
+
+# The MiiPlan Genesis
+
+_"Simplicity is the ultimate sophistication."_ That's a quote by Leonardo da Vinci, and while I'm pretty sure he wasn't thinking about legal documents when he said it, it fits the story of MiiPlan perfectly.
+
+The genesis of MiiPlan came from an itch, an irritation at how complex, tedious, and downright frustrating legal documents could be. Legal jargon, subsections, clauses—it felt like navigating a labyrinth without a map, where every turn led to more questions instead of answers. I knew there had to be a better way, an easier way. That's when the idea of creating a step-by-step guide for these documents was born. A user-friendly tool that would demystify the legal mumbo-jumbo and help anyone understand what they were getting into.
+
+Just when this idea was starting to take shape, along came a couple of game-changers—GPT-3 and Github Copilot. These two powerhouses were redefining the way we looked at AI, offering potential uses that were seemingly infinite. I was intrigued. Meanwhile, platforms like ShortlyAI and Conto AI were already riding this wave, harnessing the capabilities of GPT to generate content with an uncanny touch of human-like nuance.
+
+And then, the proverbial light bulb went off.
+
+What if we could use this AI, this powerful language model, to not just simplify legal language, but generate fully tailored legal plans for users? All it would need are responses to a few key questions, and voila, you'd have a complete business plan or legal document that fits your needs like a bespoke suit. It was like giving a set of blueprints to an expert builder—feed in the requirements, and you get a perfect structure built for you. And thus, MiiPlan began to take shape, a platform designed to make writing legal plans as easy as pie.
+
+That was the "Aha!" moment, the pivot point where MiiPlan transformed from a useful guide to an innovative, AI-powered solution for legal documents.
+
+![An image of shortly ai](https://ucarecdn.com/ecb9b6e1-001f-424d-86c1-b40af8800f78/shortlyai.png)
+
+&nbsp;
+
+# The Challenge of Making Legal Easy
+
+Ah, legalese. Just hearing the word might make you envision towering stacks of paper filled with indecipherable jargon. From its lofty language to its maze-like structure, legal writing can be quite the beast to tackle.
+
+It's like climbing a mountain with a dictionary as your only tool—it&apos;s heavy, it&apos;s cumbersome, and it&apos;s not going to help you get to the top. Traditional legal documents are cluttered with 'heretofores', 'whereins' and 'pursuants', words that are as alien to most of us as a Martian tongue. Making sense of them? That&apos;s a steep climb.
+
+But that's precisely the challenge MiiPlan was designed to tackle head-on. How? By enlisting the help of an AI powerhouse, GPT-3. Consider it our sherpa, our trusty guide through the treacherous trails of legalese.
+
+GPT-3, at its core, is an AI that understands human language—it's like a bilingual translator who knows both English and Legalese. It&apos;s not just about translating legalese into simple language though; it's about preserving the nuances, the crucial meaning hidden behind the words. It's about making sure you can say, "I understand what I'm signing here."
+
+Using GPT-3, MiiPlan translates complex legal terms into simple, understandable language. It's as though GPT-3 takes the essence of a legal document, pulls it apart, and then rebuilds it into a form that&apos;s easy to understand, without losing any of its legal clout. It&apos;s like magic, but it&apos;s real. With MiiPlan, you no longer have to decipher what a clause means or interpret dense paragraphs of text. It&apos;s all there, laid out in plain, simple English.
+
+This, my friends, is the power of MiiPlan: turning the labyrinth of legal jargon into a straightforward, well-lit path, making the legal world a little less intimidating, one document at a time. Because, at the end of the day, the law should be accessible to all of us, not just those who can decipher its complex language.
+
+&nbsp;
+
+![A legal cartoon](https://ucarecdn.com/cab923fb-d227-4cff-8bc9-37c98104b81c/cropped.png)
+
+&nbsp;
+
+# The Building of MiiPlan
+
+Creating MiiPlan was a journey characterized by ingenuity, humor, and technical hurdles. Before OpenAI introduced ChatGPT, creating the ideal GPT-3 prompt felt akin to attempting a sophisticated culinary creation with oven gloves on, a process more aggravating than many would like to confess. For the front-end, we used Next.js, and let's just say that we rather swiftly incorporated fundamental design elements from the TailwindUI website. On the back-end, we set up an express server that interfaced with the OpenAI API.
+
+Our main problem was the organization of information to facilitate GPT-3's comprehension and effective usage. Simply presenting the AI with unprocessed information like:
+
+> Name: John Doe\
+> Company: Acme\
+> Now write me a business plan for funding.
+
+...typically resulted in poor responses from GPT-3. It often prompted further queries and produced an unsatisfactory output.
+
+We overcame this issue methodically, deciding to embed a multitude of examples directly into the user-generated prompts. We used this approach for every question posed within the document. Additionally, we utilized the responses to earlier questions as context, tweaking the recommendations to fit the specific questions presented. You can imagine it as a domino effect, where each answer you provide gives more precise context to GPT for the next question.
+
+This method enabled us to produce customized legal documents, carefully assembled piece by piece, similar to the crafting process of a Swiss watchmaker. As a result, MiiPlan came into existence, with all its unique, creative, and GPT-3-enhanced features.
+
+&nbsp;
+
+# Using MiiPlan in practice
+
+To begin, users can select from a range of supported documents. For example, let's say you need an IRAP funding proposal. Simply choose this option from the list, and MiiPlan takes you to the editor page. This is where the magic happens. The editor page comprises two main components: on the left side of the screen, you will find simple questions, and on the right, you have a Google Docs-style page where you can modify the outputs generated by GPT-3.
+
+As you answer the questions on the left, MiiPlan's powerful GPT-3 integration processes your responses and instantly populates the document on the right with relevant, professionally written content tailored to your individual needs. Using MiiPlan, you could just as easily create an employment contract, a non-disclosure agreement, or even a comprehensive business plan - the possibilities are vast.
+
+![A gif of MiiPlan in action](/images/projects/miiplan/editor-page.gif)
+
+There are no cumbersome customization options, design choices, or jurisdiction-specific requirements to worry about, meaning MiiPlan keeps the focus on delivering a simple, user-friendly experience.
+
+&nbsp;
+
+# MiiPlan's Shortcomings
+
+As with any ambitious undertaking, MiiPlan faced its fair share of challenges. One significant obstacle we encountered came in the form of stiff competition. Market giants like Legal Zoom provide users with a comprehensive suite of legal document solutions - often more consistent and practical than what MiiPlan offered at the time. In order to be considered a genuine contender against established competitors, MiiPlan would have required months of hard work and innovation to develop a managed version of the most sought-after legal documents. Even then, we acknowledged that our platform would only be able to cover a fraction of the vast array of services our competitors offered.
+
+Furthermore, it became evident that many individuals preferred not to tackle legal documents themselves, regardless of how simple the process might have seemed. Our target users were primarily legal assistants aiming to save time on drafting routine documents, but these professionals usually had their own stash of customizable templates to complete their work more efficiently. Consequently, although we received positive feedback from users who did try MiiPlan, customer acquisition proved challenging in this crowded market.
+
+&nbsp;
+
+# Lessons Learned
+
+During MiiPlan's development, we faced several critical decision-making moments that ultimately shaped the platform's direction. For instance, one particular challenge arose when we had to decide between allocating resources to improve the functionalities of the existing document generator or to expand the number of accessible legal documents. Striking a balance between enhancing user experience and growing our catalog was a constant theme throughout the platform's development.
+
+Throughout MiiPlan's journey, the team learned valuable lessons that will continue to resonate with us for the rest of our careers. We gained first-hand experience in the importance of understanding user needs, conducting thorough market research, and setting realistic expectations. We also learned the value of effective time management, resource allocation, and the significance of remaining adaptable in the ever-changing technology landscape.
+
+In retrospect, while MiiPlan eventually succumbed to the numerous challenges we faced, I remain grateful for the experiences and the wisdom gained from my time with the company. As a developer who has since moved on from the world of legal document creation, the lessons learned from MiiPlan continue to guide and inform my current endeavors in other technology-driven areas. Ultimately, I encourage other passionate developers and entrepreneurs to embrace the uncertainties of the tech world - for each setback brings with it invaluable insights, shaping us into better innovators and problem solvers.
+
+export default ({ children }) => (
+	<Article
+		title="MiiPlan"
+		description="Software engineer • Full stack development"
+		topComponent={() => <MiiPlanRobot />}
+	>
+		{children}
+	</Article>
+);

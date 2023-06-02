@@ -1,3 +1,8 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+/* We do ths because adjusting the plugins for mdx to modify the  */
+blockquote p {
+	margin-bottom: 0 !important;
+}

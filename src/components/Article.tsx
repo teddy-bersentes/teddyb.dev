@@ -31,11 +31,16 @@ export default function Article({ title, description, children, topComponent }: 
 					</p>
 				</motion.div>
 
-				<div className='flex w-full min-[1164px]:px-0 sm:px-16 xs:px-10 px-4 justify-center'>
+				<motion.div
+					className='flex w-full min-[1164px]:px-0 sm:px-16 xs:px-10 px-4 justify-center'
+					initial={{ opacity: 0, y: -12 }}
+					animate={{ opacity: 1, y: 0 }}
+					transition={{ type: 'spring', duration: 0.5, bounce: 0, delay: 0.3 }}
+				>
 					<div className='flex flex-col justify-center w-full min-[1164px]:max-w-5xl pt-24'>
 						{children}
 					</div>
-				</div>
+				</motion.div>
 
 				<Footer />
 			</div>

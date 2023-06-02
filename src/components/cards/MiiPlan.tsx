@@ -3,6 +3,7 @@ import { motion, Variants } from "framer-motion";
 import { cardVariants as card, springTransition as transition } from "~/utils/animation";
 import Browser from "../Browser";
 import Image from "next/image";
+import Link from "next/link";
 
 type CableProps = {
 	width: number
@@ -49,41 +50,43 @@ const browser: Variants = {
 
 export default function MiiPlan() {
 	return (
-		<motion.div
-			variants={card}
-			initial='initial'
-			whileHover='hover'
-			transition={transition}
-			className='relative w-full overflow-hidden bg-white cursor-pointer pt-7 px-9 mt-28 h-96 rounded-4xl'
-		>
-			<div className="absolute inset-0 z-0 bg-[url(/grid.svg)] bg-center" />
-			<div
-				className='absolute inset-0 w-full h-full z-[5]'
-				style={{ background: 'radial-gradient(60% 50% at 50% 50%, rgba(217, 217, 217, 0) 0%, #ffffff 100%)' }}
-			/>
-
-			<h2 className='relative z-20 text-xl font-medium leading-5 text-t-gray'>MIIPLAN</h2>
-			<h1 className='font-bold relative z-20 xs:text-[2.5rem] text-4xl leading-10 mt-2'>AI Legal Plans</h1>
-
+		<Link href='/projects/miiplan'>
 			<motion.div
-				className='relative z-10'
-				variants={browser}
+				variants={card}
+				initial='initial'
+				whileHover='hover'
 				transition={transition}
+				className='relative w-full overflow-hidden bg-white cursor-pointer pt-7 px-9 mt-28 h-96 rounded-4xl'
 			>
-				<Browser
-					className='z-20 min-w-[28.125rem] sm:relative sm:right-auto absolute sm:top-16 top-40 xs:-right-32 -right-36'
-					url='miiplan.ai'
+				<div className="absolute inset-0 z-0 bg-[url(/grid.svg)] bg-center" />
+				<div
+					className='absolute inset-0 w-full h-full z-[5]'
+					style={{ background: 'radial-gradient(60% 50% at 50% 50%, rgba(217, 217, 217, 0) 0%, #ffffff 100%)' }}
+				/>
+
+				<h2 className='relative z-20 text-xl font-medium leading-5 text-t-gray'>MIIPLAN</h2>
+				<h1 className='font-bold relative z-20 xs:text-[2.5rem] text-4xl leading-10 mt-2'>AI Legal Plans</h1>
+
+				<motion.div
+					className='relative z-10'
+					variants={browser}
+					transition={transition}
 				>
-					<div className='relative w-full aspect-[1.6] bg-white'>
-						<Image
-							src='/images/miiplan.png'
-							alt='MiiPlan Panel'
-							className='object-contain w-full h-full'
-							fill
-						/>
-					</div>
-				</Browser>
+					<Browser
+						className='z-20 min-w-[28.125rem] sm:relative sm:right-auto absolute sm:top-16 top-40 xs:-right-32 -right-36'
+						url='miiplan.ai'
+					>
+						<div className='relative w-full aspect-[1.6] bg-white'>
+							<Image
+								src='/images/miiplan.png'
+								alt='MiiPlan Panel'
+								className='object-contain w-full h-full'
+								fill
+							/>
+						</div>
+					</Browser>
+				</motion.div>
 			</motion.div>
-		</motion.div>
+		</Link>
 	)
 }
