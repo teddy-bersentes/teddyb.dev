@@ -13,7 +13,6 @@ export default function Physarum() {
 				whileHover='hover'
 				transition={transition}
 			>
-
 				<h2 className='text-xl font-medium leading-5 text-[#949494]'>PERSONAL PROJECTS</h2>
 				<h1 className='font-bold xs:text-[2.5rem] text-4xl text-white leading-10 mt-2'>Physarum</h1>
 

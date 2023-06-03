@@ -31,16 +31,17 @@ export default function Home() {
 						<Card.SiteCommsPortal />
 					</div>
 
-					<Card.MiiPlan />
+					<div className='flex flex-col items-center justify-center lg:flex-row lg:gap-12 mt-28 gap-28'>
+						<Card.Tabloid />
+						<Card.TabloidAlt />
+					</div>
+
 
 					<Title type='freelance' />
 
 					<Card.SmileFood />
 
-					<div className='flex flex-col items-center justify-center lg:flex-row lg:gap-12 mt-28 gap-28'>
-						<Card.Tabloid />
-						<Card.TabloidAlt />
-					</div>
+					<Card.MiiPlan />
 
 					<Title type='personal' />
 

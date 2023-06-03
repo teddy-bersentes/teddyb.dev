@@ -1,0 +1,16 @@
+import Article from "~/components/Article";
+import SmileFoodHero from "~/components/projects/SmileFoodHero";
+
+![Smile food system](https://ucarecdn.com/8f469cd7-8806-4415-b0a5-941bd9c831e5/smile.png)
+
+&nbsp;
+
+export default ({ children }) => (
+	<Article
+		title="Smile Food System"
+		description="Software engineer • UI/UX Designer • Mobile Developer"
+		topComponent={() => <SmileFoodHero />}
+	>
+		{children}
+	</Article>
+);
