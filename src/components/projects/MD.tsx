@@ -17,8 +17,14 @@ const MDComponents: Components = {
 			<div className="absolute inset-0 rounded-2xl ring-1 ring-inset ring-slate-900/10 dark:ring-white/10" />
 		</div>
 	),
-	ol: ({ ...props }) => <ol className='mb-4 list-decimal list-inside' {...props} />,
-	li: ({ ...props }) => <li className='mb-2 text-lg' {...props} />,
+	ol: ({ ...props }) => <ol className='-mb-6 list-decimal list-inside' {...props} />,
+	li: ({ children, ...props }) => (
+		<li className='flex-row pl-1.5 text-lg text-gray-400 my-7' {...props}>
+			<span className='pl-1.5 text-black text-[1.0625rem] leading-[1.7rem]'>
+				{children}
+			</span>
+		</li>
+	)
 }
 
 export default MDComponents;
