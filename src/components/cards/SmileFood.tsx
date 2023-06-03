@@ -26,7 +26,7 @@ export default function SmileFood() {
 	const [visible, setVisible] = useState(false)
 
 	return (
-		<Link href='/projects/smilefoodsystem'>
+		<Link href='/projects/smile-food-system'>
 			<div className='relative'>
 				<motion.div
 					className='relative flex flex-col w-full mt-16 overflow-hidden bg-white cursor-pointer h-96 rounded-4xl pt-7 px-9'

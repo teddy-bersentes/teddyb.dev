@@ -17,6 +17,7 @@ export default function Home() {
 			</Head>
 
 			<Hero />
+
 			<div className='flex w-full min-[1164px]:px-0 sm:px-16 xs:px-10 px-4 justify-center'>
 				<motion.div
 					className='flex flex-col justify-center w-full min-[1164px]:max-w-5xl pt-24'

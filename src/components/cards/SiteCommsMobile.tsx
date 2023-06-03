@@ -10,7 +10,7 @@ const phone: Variants = {
 
 export default function SiteCommsMobile() {
 	return (
-		<Link href='/projects/sitecomms' className='w-full lg:w-96'>
+		<Link href='/projects/site-comms' className='w-full lg:w-96'>
 			<motion.div
 				className='relative flex flex-col w-full overflow-hidden bg-white h-96 lg:w-96 rounded-4xl pt-7 px-9 hover:cursor-pointer'
 				variants={card}

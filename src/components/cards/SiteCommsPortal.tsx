@@ -10,7 +10,7 @@ const browser: Variants = {
 
 export default function SiteCommsPortal() {
 	return (
-		<Link href='/projects/sitecomms' className='w-full lg:grow lg:w-auto'>
+		<Link href='/projects/site-comms' className='w-full lg:grow lg:w-auto'>
 			<motion.div
 				className='relative flex flex-col w-full overflow-hidden bg-white pt-7 px-9 lg:grow lg:w-auto h-96 rounded-4xl hover:cursor-pointer'
 				variants={card}
