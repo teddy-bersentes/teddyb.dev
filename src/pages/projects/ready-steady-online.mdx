@@ -1,0 +1,115 @@
+import Article from "~/components/Article";
+import RSOCowboy from "~/components/projects/RSOCowboy";
+
+# Falling in love with Ready Steady Bang
+
+Once upon a 4th of July party many moons ago, a friend introduced me to a game that would have a lasting impact — Ready Steady Bang. As the party unfolded around us, we became enraptured by its deceptive simplicity and delightful animations. We laughed and competed with each other, trying to best each other's cowboy showdown skills.
+
+The game's magic lay in its minimalistic approach to design, with few elements on the screen and a monochromatic color palette that occasionally flashed gold - emphasizing the game's motion. But the true stars of the show were the hilarious death animations, as each defeated cowboy met their doom in a variety of comical ways. These cartoonish end sequences brought life to a genre rarely associated with charmingly animated characters.
+
+Years passed, and the memory of Ready Steady Bang remained near and dear to me. The game often served as a reminder of great game design and effective simplicity while I pursued my journey as a developer. One day, during a conversation with the friend who had originally shown me the game, the idea to create an online version emerged. And so, the quest to create Ready. Steady. Online. began, aiming to recapture the thrills of our Wild West showdowns and share them with the world.
+
+I also have to mention the trailer released 11 years ago. A brief, yet magical 20-second video that made me wonder how I missed the hype back then.
+
+&nbsp;
+
+<iframe
+	className="w-full h-[30rem] lg:px-24 px-0"
+	src="https://www.youtube.com/embed/hSAc5-2YTDc"
+	frameBorder="0"
+	allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+	allowfullscreen
+/>
+
+&nbsp;
+
+# Making the Showdown
+
+The journey to create an online version of Ready Steady Bang was a thrilling one. The first challenge I faced was getting a base implementation where two people could duel, sending requests to a server and determining who "shot" faster. It also became clear that the game's groundwork, including lobbies and sharing mechanisms, was an essential part of the puzzle that couldn't be overlooked. While minimizing overhead, I wanted to leverage WebRTC to provide that authentic real-time experience. This led me to break down the essential components needed for the game to function.
+
+![A flow through the clients syncing](https://ucarecdn.com/3063e1ac-398b-4a1c-a92d-bdb4d7b12d20/Screenshot20230603at34257AM.jpeg)
+
+![More diagrams](https://ucarecdn.com/f6faea40-13b1-4b1a-9b77-9007bd931bbc/diagrams.png)
+
+Generating random times for the "ready," "steady," and "bang" events was a central component required for the game's base implementation. Consistency across both clients was key, not only in the timing of these events, but also in synchronizing the start times for players.
+
+Comparing the smallest timestamp difference from when the "bang" happened to when the player fired, I suspected this was how the original game determined the winner. While straightforward, this endeavor only scratched the surface of the challenges to come.
+
+![The home page of RSO](https://ucarecdn.com/007569ea-50a8-4e5b-9561-1a6ff7349c24/Screenshot20230603at40333AM.png)
+
+Adapting the design for web compatibility was relatively painless. I decided against including a scoreboard, as it was unnecessary for the minimum viable implementation. However, recreating the game's iconic animations and assets proved to be pretty difficult, especially since the original game used pre-rendered sprites and not easily reusable SVG animations.
+
+What intrigued me most about this project was solving the infamous "network problem" - addressing response time delays in a real-time reaction game. My friend and I coined the term to represent this challenge, which forms the focus of our discussion in the next section.
+
+# A Faceoff for the Ages
+
+The central challenge when adapting Ready Steady Bang for online play
+was the "network problem," as my friend and I dubbed it. It revolved
+around finding a way to send and receive requests to the server without
+introducing awkward pauses or unfairly impacting a player's reaction
+time due to connectivity issues. The solution lay in a secretly
+implemented "loading screen" cleverly disguised as a cowboy animation.
+
+When players receive their "ready," "steady," and "bang" cues, I set
+up a web socket to listen for two events: "game over" and "fire." The
+first subscription returns the game outcome, while the second listens
+for a premature shot. To maintain the illusion of instantaneous firing, I
+hid request loading times in an animation of the cowboy's arm moving
+toward the gun. This subtle delay provided adequate time for a server
+response without giving away the behind-the-scenes mechanics.
+
+![Even more diagrams](https://ucarecdn.com/79c951df-58e0-4a73-94cd-386b17f1ba00/shootdiagrams.png)
+
+Breaking down this solution in greater detail, here's a step-by-step rundown of a firing request's journey:
+
+&nbsp;
+
+1. User presses the spacebar and the cowboys arm starts moving to his gun
+2. The server receives the request and records the player's shot time
+3. The server quickly accesses the current game state to check if someone shot before the player
+4. Assuming this player shoots first, we know were going to end the game soon, either the other player will shoot soon, or they haven't shot at all and should die (in the game)
+5. If the other player fires within the allotted time frame (usually pretty soon after), the server compares both shot times and sends the results to the users via the "game over" subscription
+
+&nbsp;
+
+An easy way to think of it is simply that after I get a “shoot” event on the server, the game should probably end very soon. From the users perspective, after the arms starts moving down, the game will have a result in about 250ms + minor network delay.
+
+The "network problem" mentioned earlier highlights an issue that can be experienced in online games where players may have varying latency times. In such cases, a player who appears to have shot faster on their screen may not necessarily be the winner, as the other player may have actually fired faster but experienced a delay due to their connection. In more popular multiplayer games like Mortal Kombat or Street Fighter, a solution often used is a roll-back system.
+
+A video made by the Youtube channel Core-A Gaming did a fantastic job explaining the nuances of Rollback and why it exists. This is very similar to the “network problem” but at a much larger scale.
+
+&nbsp;
+
+<iframe
+	className="w-full h-[30rem] lg:px-24 px-0"
+	src="https://www.youtube.com/embed/0NLe4IpdS1w"
+	frameBorder="0"
+	allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+	allowfullscreen
+/>
+
+&nbsp;
+
+Another hurdle was adapting the cowboys' animations for online use. Rather than relying on image files or gifs, I (kind of legally) downloaded the APK of the Android version. It turns out APK files are actually .zip files containing all assets, binaries, and config files for an app. This let me extract all the original assets, including sound, sprite sheets, and JSON animation data. After painstakingly optimizing these files for Pixi.js compatibility, the web version boasted visually stunning animations faithful to the original game.
+
+# Reflections
+
+Developing Ready. Steady. Online. was a breath of fresh air. As a developer, I often found myself working on projects that centered around data management, such as social media platforms, time-tracking apps, or business plan creators. RSO allowed me to explore the world of game development - a special type of coding that holds the power to bring joy and larger-than-life experiences.
+
+Throughout this project, I was reminded of what drew me to coding in the first place: the ability to create engaging and entertaining experiences that go beyond being just a practical tool.
+
+My desire to showcase RSO even led me to contact the game's original creators. Much to my delight, they loved the web adaptation.
+
+_(POTENTIAL CONTRIBUTION)_
+
+As the sun sets on this digital adventure, I am grateful for the opportunity to explore my love for coding, tackle new technological challenges, and create a project that brings enjoyment to others. With Ready Steady Online continuously evolving, I eagerly anticipate sharing this passion project with more and more players, forging connections, and sparking laughter in the online Wild West.
+
+export default ({ children }) => (
+	<Article
+		title="Ready. Steady. Online."
+		description="Personal project • Creative endeavour"
+		topComponent={() => <RSOCowboy />}
+	>
+		{children}
+	</Article>
+);
