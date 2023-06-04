@@ -3,6 +3,7 @@ import clsx from 'clsx';
 import Button from './Button';
 import Scribble from './scribbles';
 import { motion } from 'framer-motion';
+import Link from 'next/link';
 
 type Props = {
 	variant: 'red' | 'blue' | 'yellow'
@@ -63,10 +64,11 @@ function Hero() {
 						initial={{ opacity: 0, scale: 0.85 }}
 						animate={{ opacity: 1, scale: 1 }}
 						transition={{ type: 'spring', duration: 0.5, bounce: 0, delay: 0.8 }}
+						className='mt-10 mb-2'
 					>
-						<Button className='mt-10'>
+						<Link href='https://github.com/teddy-bersentes' target='_blank' className='px-8 py-4 font-medium leading-5 text-white bg-black rounded-xl'>
 							Show me more
-						</Button>
+						</Link>
 					</motion.div>
 				</motion.div>
 			</div>
