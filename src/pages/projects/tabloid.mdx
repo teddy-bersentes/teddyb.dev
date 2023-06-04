@@ -1,0 +1,26 @@
+import Article from "~/components/Article";
+import TabloidSelfie from "~/components/projects/TabloidSelfie";
+
+![An image of thumbnail art for Tabloid](https://ucarecdn.com/88454f54-8dc3-4ab0-a4bf-b06e59f5396e/Thumbnail.png)
+
+&nbsp;
+
+![A marketing cover for Tabloid](https://ucarecdn.com/f3e8e6f6-d349-47c7-811b-0a3415cdaf96/cover.png)
+
+&nbsp;
+
+![More marketing stuff for Tabloid](https://ucarecdn.com/cda7df42-d524-4ede-9d72-9c347475a706/screens.png)
+
+&nbsp;
+
+![An image of the Tabloid app on a desk](https://ucarecdn.com/07ff046e-e780-45a8-9c2d-e2168e37decd/previews.png)
+
+export default ({ children }) => (
+	<Article
+		title="Tabloid"
+		description="Senior Software Developer • Full stack development"
+		topComponent={() => <TabloidSelfie />}
+	>
+		{children}
+	</Article>
+);
