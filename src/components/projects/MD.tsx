@@ -10,7 +10,7 @@ const MDComponents: Components = {
 	a: ({ ...props }) => <a className='transition-opacity text-t-blue hover:opacity-80 hover:underline' {...props} />,
 	hr: ({ ...props }) => <hr className='mb-4 border-t-2 border-[#D2D2D2]' {...props} />,
 	img: (props: any) => (
-		<div className="relative not-prose [a:not(:first-child)>&]:mt-[2em] [a:not(:last-child)>&]:mb-[2em] my-[2em] first:mt-0 last:mb-0 rounded-2xl overflow-hidden [figure>&]:my-0">
+		<div className="relative not-prose [a:not(:first-child)>&]:mt-[2em] [a:not(:last-child)>&]:mb-[2em] my-[2em] flex justify-center items-center first:mt-0 last:mb-0 rounded-2xl overflow-hidden [figure>&]:my-0">
 			{/* eslint-disable @next/next/no-img-element */}
 			{/* eslint-disable-next-line jsx-a11y/alt-text */}
 			<img {...props} decoding="async" />

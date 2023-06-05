@@ -40,9 +40,10 @@ export default function Home() {
 
 					<Title type='freelance' />
 
+					<Card.MiiPlan />
+
 					<Card.SmileFood />
 
-					<Card.MiiPlan />
 
 					<Title type='personal' />
 
