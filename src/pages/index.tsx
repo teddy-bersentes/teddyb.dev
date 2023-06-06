@@ -7,7 +7,7 @@ import Footer from "~/components/Footer";
 
 export default function Home() {
 	return (
-		<div className='relative flex flex-col items-center w-full h-full min-h-screen overflow-x-hidden overflow-y-scroll bg-t-bg no-scrollbar'>
+		<div className='relative flex flex-col items-center w-full h-full min-h-screen overflow-y-scroll over bg-t-bg no-scrollbar'>
 
 			<Head>
 				<title>Teddy&apos;s Portfolio | Software Developer</title>
@@ -16,6 +16,8 @@ export default function Home() {
 				<meta name="author" content="Theodore 'Teddy' Bersentes" />
 				<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
 			</Head>
+
+			<Hero />
 
 			<div className='flex w-full min-[1164px]:px-0 sm:px-16 xs:px-10 px-4 justify-center'>
 				<motion.div
