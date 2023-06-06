@@ -1,6 +1,6 @@
 # teddyb.dev
 
-![The website](https://ucarecdn.com/fcdd9e7b-b8cb-4313-a890-3d56be851756/thewebsite.png)
+![The website](https://ucarecdn.com/e5a41413-0e49-4bb5-b372-be6b06898eea/the_website.png)
 
 Welcome to the repository of my personal portfolio, [teddyb.dev](https://www.teddyb.dev).
 
