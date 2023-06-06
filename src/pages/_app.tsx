@@ -3,6 +3,7 @@ import type { AppProps } from 'next/app'
 import { Poppins, Inter } from 'next/font/google'
 import { Analytics } from '@vercel/analytics/react';
 import clsx from 'clsx'
+import { useEffect } from 'react';
 
 export const poppins = Poppins({
 	subsets: ['latin'],
@@ -17,6 +18,10 @@ export const inter = Inter({
 })
 
 export default function App({ Component, pageProps }: AppProps) {
+	useEffect(() => {
+		console.info("If you're looking for easter eggs, they aren't here.\n\nBut they might be here: https://github.com/teddy-bersentes/teddyb.dev ")
+	}, [])
+
 	return (
 		<>
 			<main className={clsx(poppins.className, 'min-w-[22.5rem] font-sans')}>

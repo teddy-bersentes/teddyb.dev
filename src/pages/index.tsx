@@ -7,7 +7,7 @@ import Footer from "~/components/Footer";
 
 export default function Home() {
 	return (
-		<div className='relative flex flex-col items-center w-full h-full min-h-screen overflow-scroll bg-t-bg no-scrollbar'>
+		<div className='relative flex flex-col items-center w-full h-full min-h-screen overflow-x-hidden overflow-y-scroll bg-t-bg no-scrollbar'>
 
 			<Head>
 				<title>Teddy&apos;s Portfolio | Software Developer</title>
