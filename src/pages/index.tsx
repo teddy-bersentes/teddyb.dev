@@ -14,9 +14,8 @@ export default function Home() {
 				<meta name="description" content="The personal portfolio website of Theodore (Teddy) Bersentes, a skilled software developer showcasing his work and experience." />
 				<meta name="keywords" content="Teddy, Theodore, Bersentes, web developer, app developer, full-stack developer, programmer, portfolio" />
 				<meta name="author" content="Theodore 'Teddy' Bersentes" />
+				<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
 			</Head>
-
-			<Hero />
 
 			<div className='flex w-full min-[1164px]:px-0 sm:px-16 xs:px-10 px-4 justify-center'>
 				<motion.div

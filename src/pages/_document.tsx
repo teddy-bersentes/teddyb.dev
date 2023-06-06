@@ -14,8 +14,6 @@ export default function Document() {
 				<meta property="og:title" content="Teddy's Portfolio | Software Developer" />
 				<meta property="og:description" content="The portfolio of Teddy Bersentes, Software Developer." />
 				<meta property="og:url" content="https://www.teddyb.dev" />
-
-				<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
 			</Head>
 			<body>
 				<Main />
