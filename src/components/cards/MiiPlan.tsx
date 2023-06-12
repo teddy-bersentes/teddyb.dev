@@ -73,7 +73,7 @@ export default function MiiPlan() {
 					transition={transition}
 				>
 					<Browser
-						className='z-20 min-w-[28.125rem] sm:relative sm:right-auto absolute sm:top-16 top-40 xs:-right-32 -right-36'
+						className='z-20 min-w-[28.125rem] sm:relative sm:right-auto absolute sm:top-16 top-24 xs:-right-32 right-auto xs:left-0 left-12'
 						url='miiplan.ai'
 					>
 						<div className='relative w-full aspect-[1.6] bg-white'>
