@@ -10,10 +10,10 @@ export default function Home() {
 		<div className='relative flex flex-col items-center w-full h-full min-h-screen overflow-y-scroll over bg-t-bg no-scrollbar'>
 
 			<Head>
-				<title>Teddy&apos;s Portfolio | Software Developer</title>
-				<meta name="description" content="The personal portfolio website of Theodore (Teddy) Bersentes, a skilled software developer showcasing his work and experience." />
-				<meta name="keywords" content="Teddy, Theodore, Bersentes, web developer, app developer, full-stack developer, programmer, portfolio" />
-				<meta name="author" content="Theodore 'Teddy' Bersentes" />
+				<title>Teddy Bersentes Portfolio | Software Developer</title>
+				<meta name="description" content="The personal portfolio website of Teddy Bersentes, a skilled software developer showcasing his work and experience." />
+				<meta name="keywords" content="Teddy, Theodore, Bersentes, software engineer, web developer, app developer, full stack developer, portfolio" />
+				<meta name="author" content="Teddy Bersentes' Portfolio" />
 				<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
 			</Head>
 
