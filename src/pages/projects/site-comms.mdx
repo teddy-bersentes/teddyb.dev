@@ -1,7 +1,12 @@
 import Article from "~/components/Article";
 import SiteCommsCityScape from "~/components/projects/SiteCommsCityScape";
+import SingleImageScaleView from "~/components/SingleImageScaleView";
 
-![An image of some screens](https://ucarecdn.com/eee3410b-fe3f-495b-9615-e8977e765255/windows.png)
+<SingleImageScaleView
+	url="https://ucarecdn.com/0f7dd8d6-ed00-47ec-b496-65a21d1a6dba/dashboardshadow.png"
+	alt="An image of the home screen"
+	blurHash="U7Q0aRIt-;~p=^-n?aIp9Et6xujbb{D+Rj-o"
+/>
 
 &nbsp;
 
@@ -12,10 +17,6 @@ Imagine you're on a construction site, and it's utter chaos. There's a guy on th
 After taking a look at what the market had to offer for construction management, We felt like we had stepped into a time machine - not the cool, 'Back to the Future' kind, but one that takes you back to the days when fax machines were the rage. The options were either the colossal ProCore or other alternatives that felt like they were coded by a T-Rex. It was clear; the construction industry needed a modern, SaaS-flavored shakeup. And thus, Site Comms was born
 
 So, what is this fresh, exciting platform that's about to revolutionize your construction site management, you ask? Well, Site Comms is the knight in shining armor for construction managers. It's the digital assistant that never sleeps, the watchful guardian that makes sure your workers come and go in harmony, and the beacon of efficiency that streamlines your most complicated processes.
-
-&nbsp;
-
-![A funny image of construction workers](https://ucarecdn.com/bd12dc13-ce5f-4e50-993f-068113c1c83e/constructioncartoon.webp)
 
 &nbsp;
 
@@ -35,31 +36,46 @@ Creating Site Comms felt a lot like playing Jenga. We had a tower of preconceive
 
 Here are some of the features that we personnally loved the most:
 
-![A video of the site map](/images/projects/sitecomms/site-map.gif)
-
 ### Site Map
 
 Our admin portal, much like the helm of a ship, guides you through the vast sea of construction management. Dominating the screen is an interactive Google Maps-style map. Pinpoints mark each site, and with a click, you can zoom into the site details - personnel, hazards, currently checked-in workers, and more. You get a bird's-eye view and a worm's-eye view, all from the same screen.
 
-![Our take on a site induction](/images/projects/sitecomms/induction-screens.png)
+<div className="flex flex-col justify-center items-center p-2.5 bg-white border border-[#EBEBEB] rounded-3xl">
+	![A video of the site map](/images/projects/sitecomms/site-map-feature.gif)
+</div>
+
+&nbsp;
 
 ### Time Carding and Induction
 
 We've also tackled the industry's arch-nemesis - paperwork. Thanks to geofencing technology, we know when a worker is on-site and can prompt them to complete their induction on their phone. No more reams of forms with endless personal details, just a simple 'Read, Agree, and Go'. And rest assured, we've checked all the boxes for compliance with Australian law.
 
-![An image of the peronnel page](https://ucarecdn.com/72a29731-092a-46ae-955d-cd50bc2d8792/qr234.png)
+<div className="flex flex-col justify-center items-center p-2.5 bg-white border border-[#EBEBEB] rounded-3xl px-6">
+	![Our take on a site
+	induction](https://ucarecdn.com/b0d06238-e046-4324-bc7a-77690fc2d4da/phonesmaps.png)
+</div>
+
+&nbsp;
 
 ### QR Code Onboarding
 
 We understand change can be challenging, especially when it comes to adopting new tech. So, we added unique QR codes on posters at each construction site. One quick scan lets workers download the app and join the site, making the transition as smooth as a perfectly poured concrete slab.
 
+![An image of the peronnel page with some scanning screens](https://ucarecdn.com/1e50e59b-52c8-4c9e-a4fb-6fc966117afb/qrstuff.png)
+
 &nbsp;
 
 # The Tech Behind the Solution
 
-![An image of the site detail page](https://ucarecdn.com/26ec80ee-5b30-48aa-b02a-0df7d1570412/laptop.png)
-
 Site Comms is a blend of tech ingredients, each chosen for its unique flavor, creating a full-bodied solution that's both robust and flexible. We married MongoDB, Nest.js, and GraphQL for the back-end, an alliance driven by the need for flexibility, speed, and real-time data handling. MongoDB's schema-less nature, combined with Nest.js's modular structure and GraphQL's efficient data-fetching capabilities, allowed us to serve complex data in the most streamlined way possible.
+
+<SingleImageScaleView
+	url="https://ucarecdn.com/45af5908-e8a3-4b3e-9b2c-beec07151275/hazards.png"
+	alt="An image of the site management screen"
+	blurHash="UKR3TW%M~qx[RPWBxuof?vRjIAof.8ofV@WB"
+/>
+
+&nbsp;
 
 When it came to the front-end, Next.js and TailwindCSS were the stars of our web development, accompanied by MapBox for that snazzy map page and Framer Motion to breathe life into our animations. The mobile front-end donned the colors of React Native. Throughout, our secret weapon was a server-state client, React Query, which took a lot of stress off our front-end clients and kept them light and fast.
 
@@ -80,7 +96,7 @@ While basking in this glow of user admiration, we're not resting on our laurels.
 export default ({ children }) => (
 	<Article
 		title="Site Comms"
-		description="Chief Technology Officer • Full stack development"
+		description="Lead Developer • Full stack development"
 		topComponent={() => <SiteCommsCityScape />}
 	>
 		{children}

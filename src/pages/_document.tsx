@@ -2,7 +2,7 @@ import { Html, Head, Main, NextScript } from 'next/document'
 
 export default function Document() {
 	return (
-		<Html lang="en" className='font-sans subpixel-antialiased scroll-smooth'>
+		<Html lang="en" className='font-sans scroll-smooth'>
 			<Head>
 				<meta property="twitter:image" content="https://ucarecdn.com/76f16958-c954-4b70-a97e-2e49789c4d5e/ognew.png" />
 				<meta property="twitter:card" content="summary_large_image" />
