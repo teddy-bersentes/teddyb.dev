@@ -18,6 +18,12 @@ const nextConfig = {
 	images: {
 		domains: ["ucarecdn.com"],
 	},
+	rewrites: async () => [
+		{
+			source: "/ingest/:path*",
+			destination: "https://app.posthog.com/:path*",
+		},
+	],
 };
 
 export default withMDX(nextConfig);
