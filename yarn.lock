@@ -1314,7 +1314,7 @@ fastq@^1.6.0:
   dependencies:
     reusify "^1.0.4"
 
-fflate@^0.4.1:
+fflate@^0.4.8:
   version "0.4.8"
   resolved "https://registry.yarnpkg.com/fflate/-/fflate-0.4.8.tgz#f90b82aefbd8ac174213abb338bd7ef848f0f5ae"
   integrity sha512-FJqqoDBR00Mdj9ppamLa/Y7vxm+PRmNWA67N846RvsoYVMKB4q3y/de5PA7gUmRMYK/8CMz2GDZQmCRN1wBcWA==
@@ -2841,12 +2841,19 @@ postcss@^8.4.23:
     picocolors "^1.0.0"
     source-map-js "^1.0.2"
 
-posthog-js@^1.68.5:
-  version "1.68.5"
-  resolved "https://registry.yarnpkg.com/posthog-js/-/posthog-js-1.68.5.tgz#2cca51de69450b3bdeb6709178d8272c71e10df3"
-  integrity sha512-EqQuIX0k564T2fhmzQK2Gcb8s/XRhHTpk6JOeGtJV7lpMI8Hffe+gGjGHcqIc4RoOg3LjAGYNHj6XgN+QPggLg==
+posthog-js@^1.148.0:
+  version "1.148.0"
+  resolved "https://registry.yarnpkg.com/posthog-js/-/posthog-js-1.148.0.tgz#c9a70dfc679d5fcb512c902b06044af72337f8eb"
+  integrity sha512-nydf+aret26YViDBwH7DdN/c8dmCzQGNQ1yredeE47UlbpJ3J/iTgskNdmGJIofFcdSagcwAE/FF7s++YfTtvg==
   dependencies:
-    fflate "^0.4.1"
+    fflate "^0.4.8"
+    preact "^10.19.3"
+    web-vitals "^4.0.1"
+
+preact@^10.19.3:
+  version "10.22.1"
+  resolved "https://registry.yarnpkg.com/preact/-/preact-10.22.1.tgz#6a3589973fe0c6e53211091607d31f4b7b27334d"
+  integrity sha512-jRYbDDgMpIb5LHq3hkI0bbl+l/TQ9UnkdQ0ww+lp+4MMOdqaUYdFc5qeyP+IV8FAd/2Em7drVPeKdQxsiWCf/A==
 
 prelude-ls@^1.2.1:
   version "1.2.1"
@@ -3503,6 +3510,11 @@ vfile@^5.0.0:
     is-buffer "^2.0.0"
     unist-util-stringify-position "^3.0.0"
     vfile-message "^3.0.0"
+
+web-vitals@^4.0.1:
+  version "4.2.2"
+  resolved "https://registry.yarnpkg.com/web-vitals/-/web-vitals-4.2.2.tgz#e883245180b95e175eb75a5ca8903b1a11597d7a"
+  integrity sha512-nYfoOqb4EmElljyXU2qdeE76KsvoHdftQKY4DzA9Aw8DervCg2bG634pHLrJ/d6+B4mE3nWTSJv8Mo7B2mbZkw==
 
 which-boxed-primitive@^1.0.2:
   version "1.0.2"
