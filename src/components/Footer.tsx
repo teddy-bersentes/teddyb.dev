@@ -43,7 +43,7 @@ export default function Footer() {
 							<span>Github</span>
 						</Link>
 
-						<Link href='https://www.linkedin.com/in/teddy-bersentes-387068176' target='_blank' className='flex flex-row items-center gap-2 text-left text-[#4E4E4E] hover:underline'>
+						<Link href='https://www.linkedin.com/in/teddy-bersentes' target='_blank' className='flex flex-row items-center gap-2 text-left text-[#4E4E4E] hover:underline'>
 							<svg className='w-5' viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
 								<path fillRule="evenodd" clipRule="evenodd" d="M18.5514 0H1.50762C0.692381 0 0 0.644762 0 1.43905V18.56C0 19.3552 0.454286 20 1.26952 20H18.3133C19.1295 20 20 19.3552 20 18.56V1.43905C20 0.644762 19.3676 0 18.5514 0ZM7.61905 7.61905H10.3114V8.99143H10.341C10.7514 8.25143 11.9638 7.5 13.4629 7.5C16.34 7.5 17.1429 9.02762 17.1429 11.8571V17.1429H14.2857V12.3781C14.2857 11.1114 13.78 10 12.5971 10C11.1609 10 10.4762 10.9724 10.4762 12.5686V17.1429H7.61905V7.61905ZM2.85714 17.1429H5.71429V7.61905H2.85714V17.1429ZM6.07143 4.28571C6.07143 5.27238 5.27238 6.07143 4.28571 6.07143C3.29905 6.07143 2.5 5.27238 2.5 4.28571C2.5 3.29905 3.29905 2.5 4.28571 2.5C5.27238 2.5 6.07143 3.29905 6.07143 4.28571Z" fill="#4E4E4E" />
 							</svg>
