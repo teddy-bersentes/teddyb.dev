@@ -4,7 +4,7 @@
 	"homepage": "https://teddyb.dev",
 	"description": "Portfolio website for Teddy Bersentes",
 	"repository": "https://github.com/teddy-bersentes/teddyb.dev",
-	"author": "Teddy Bersentes <theodore.bersentes@gmail.com>",
+	"author": "Teddy Bersentes <teddy.bersentes@gmail.com>",
 	"private": true,
 	"scripts": {
 		"dev": "next dev",

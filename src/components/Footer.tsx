@@ -13,7 +13,7 @@ export default function Footer() {
 
 				<Button
 					className='px-12 sm:mb-16'
-					onClick={() => window.open('mailto:theodore.bersentes@gmail.com')}
+					onClick={() => window.open('mailto:teddy.bersentes@gmail.com')}
 				>
 					Contact Me
 				</Button>
@@ -54,7 +54,7 @@ export default function Footer() {
 					<div className='flex flex-col gap-5'>
 						<h1 className='mb-2 text-lg font-semibold leading-8'>Elsewhere</h1>
 
-						<Link href='mailto:theodore.bersentes@gmail.com' className='flex flex-row items-center gap-2 text-left text-[#4E4E4E] hover:underline'>
+						<Link href='mailto:teddy.bersentes@gmail.com' className='flex flex-row items-center gap-2 text-left text-[#4E4E4E] hover:underline'>
 							Email
 						</Link>
 
